@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fedatel</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/slider-swip.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+    
+      <div class="content">
+        <img class="brand log-dis" src="./img/logofedatel.svg" class="logo-header" alt="">
+        <div class="links nav-items">
+          <a href="index.html">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="faq.html">Preguntas Frecuentes</a>
+          
+        </div>
+        <i class="material-icons menu" onclick="menu()">menu</i>
+      </div>
+      <div class="dropdown" id="dropdown">
+       <a href="index.html">Inicio</a>  
+       <a href="catalogo.html">Catálogo</a>
+       <a href="nosotros.html">Nosotros</a>
+       <a href="faq.html">Preguntas Frecuentes</a>
+      </div>
+    
+  </nav>
+</header>
+    
+  
+     <!-- Catalogo -->
+     <section class="fondo-n pddnt3">
+        <div class="mgn-a m-760 pd-20 grid gap1">
+            <h2 class="tac cblan">Preguntas Frecuentes</h2>
+        
+        </div>
+     </section>
+     <!-- Adicional-->
+<section class="pddn3 rell">
+    <div class="nnar"></div>
+    <div class="contenedor mgn-a m-wd">
+        <div class="faqqq fblanco contenedor-ad sombra">
+            
+          <div class="topic">
+              <div class="open">
+                <p class="question">¿Porqué el wifi no llega a toda mi casa?</p>
+                <span class="faq-t"></span>
+              </div>
+              <p class="answer">El aréa de cobertura del wifi solo cubre todo el primer piso y si necesita llegar a mas pisos necesita comprar un repetidor por cada piso. Cada Repetidor tiene un costo de s/50.00</p>
+            </div>
+         
+            <div class="topic">
+              <div class="open">
+              <p class="question">¿Para que sirve un Repetidor Wifi?
+          </p><span class="faq-t"></span>
+              </div>
+              <p class="answer">Un Repetidor permite ampliar el alcance de la conexión a internet o wifi de manera inalámbrica.</p>
+            </div>
+            <div class="topic">
+              <div class="open">
+              <p class="question">¿Realizan servicios para empresas?
+          </p><span class="faq-t"></span>
+              </div>
+              <p class="answer">Si realizamos tanto servicio para empresas y el hogar.Tenemos Tecnología HFC y Fibra Óptica </p>
+            </div>
+            <div class="topic">
+              <div class="open">
+              <p class="question">¿Existe algún requisito para solicitar el servicio?
+          </p><span class="faq-t"></span>
+              </div>
+              <p class="answer">El servicio es brindado previo acuerdo y a evaluación crediticia. </p>
+            </div>
+         
+        </div>
+        </div>
+</section>
+
+
+    <!-- Scripts Javascript --> 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+       <script>
+        $(".open").click( function () {
+    var container = $(this).parents(".topic");
+    var answer = container.find(".answer");
+    var trigger = container.find(".faq-t");
+    
+    answer.slideToggle(200);
+    
+    if (trigger.hasClass("faq-o")) {
+    trigger.removeClass("faq-o");
+    }
+    else {
+    trigger.addClass("faq-o");
+    }
+    
+    if (container.hasClass("expanded")) {
+    container.removeClass("expanded");
+    }
+    else {
+    container.addClass("expanded");
+    }
+    });
+       </script>
+
+       <script>
+        /**
+ 
+ */
+
+var dropdown = document.querySelector(".nav .dropdown");
+var button = document.querySelector(".nav .menu");
+
+/**
+ *Is needed to close the dropdown when user clicks outside
+ */
+var nav = document.querySelector(".nav");
+
+/**
+ * Alternative 1: works with: 
+ * <i class="material-icons menu" onclick="menu()">menu</i>
+ */
+function menu() {
+  if (dropdown.style.display === "grid") {
+    dropdown.style.display = "none";
+    button.innerHTML = "menu";
+  } else {
+    dropdown.style.display = "grid";
+    button.innerHTML = "cerrar";
+  }
+}
+
+/**
+ * Alternative 2: works with: 
+ * <i class="material-icons menu">menu</i>
+button.addEventListener('click', function() {
+    if (dropdown.style.display === "grid") {
+    dropdown.style.display = "none";
+    button.innerHTML = "menu";
+  } else {
+    dropdown.style.display = "grid";
+    button.innerHTML = "close";
+  }
+});
+ */
+
+/**
+ * Close the dropdown (if opened) on window resize
+ */
+window.addEventListener("resize", function() {
+  if (window.innerWidth > 768) {
+    dropdown.style.display = "none";
+    button.innerHTML = "menu";
+  }
+});
+
+/**
+ * If the dropdown is open and a click outside is detected,
+ * the dropdown will be closed
+ */
+document.addEventListener("click", function(event) {
+  var isClickInside = nav.contains(event.target);
+  if (!isClickInside) {
+    if (dropdown.style.display === "grid") {
+      dropdown.style.display = "none";
+      button.innerHTML = "menu";
+    }
+  }
+});
+
+       </script>
+</body>
+</html>
