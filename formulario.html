@@ -162,13 +162,14 @@ de Internet fibra óptica!
                </h2>
                <p class="tac">Déjanos tus datos y contácta
                 con nuestos asesores de venta</p>
-                   </div>
+            </div>
             <div class="sombra pd-20 blnc pddn3 fblanco h400">
 
     <div class="container">
+      
         <form autocomplete="off" method="post" name="google-sheet" id="google-sheet">
             <h3>Contáctanos</h3>
-            <input id="name" type="text" placeholder="Nombre Completo" name="Nombre" >
+            <input id="name" type="text" placeholder="Nombre Completo" name="Nombre" required >
             <p class="mensajeError"></p>
             <input id="email" type="number" placeholder="Escribe tu DNI" name="Dni" required>
             <p class="mensajeError"></p>
@@ -195,7 +196,7 @@ de Internet fibra óptica!
     <p class="mensajeError"></p>
   </div>
 
-            <button type="submit" id="btn" name="submit" onClick="myFunction()" disabled >Enviar</button>
+            <button type="submit" id="btn" name="submit" >Enviar</button>
           <!--  <button type="reset" class="reset">Reset</button>-->
         </form>
     </div>
@@ -211,14 +212,14 @@ de Internet fibra óptica!
   form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-         
+        .then(response => alert("Gracias por Registrar tu Solicitud.."))
+          .catch(error => console.error('Error!', error.message))
+           form.reset();
       })
     </script>
-   <script>
-    function myFunction() {
-      window.location.href="http://programminghead.com";  
-    }
-  </script>
+<script src="./js/form.js"></script>
+    
+<script src="./js/input-habilitar.js"></script>
 
     <!-- Scripts Javascript --> 
       <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
