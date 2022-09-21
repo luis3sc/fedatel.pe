@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fedatel</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/perfil.css">
     <link rel="stylesheet" href="./css/menu.css">
@@ -1111,46 +1112,77 @@
      <!-- Catalogo -->
      <!-- Adicional-->
 
-     <section class="adicional pd-h" id="faq" >
-      
-      <div class="contenedor mgn-a m-wd">
-          <div class="faqqq">
-              <h2 class="tac">Preguntas Frecuentes  </h2>
-              
-            <div class="topic">
-                <div class="open">
-                  <p class="question">¿Porqué el wifi no llega a toda mi casa?</p>
-                  <span class="faq-t"></span>
-                </div>
-                <p class="answer">El aréa de cobertura del wifi solo cubre todo el primer piso y si necesita llegar a mas pisos necesita comprar un repetidor por cada piso. Cada Repetidor tiene un costo de s/50.00</p>
+     <section class="contratar pddn3 fondo-n">
+      <div class="fondo-b"></div>
+        <div class="mgn-a m-wd pd-20 grid gap1 int">
+            <div class="row-2 gap2 flex-alit">
+                <div class="lft-a sombra  cblan pddn3 gap1 flex-centro flex-c">
+                   <h2 class="m500  cblan">
+                    ¡Contratanos y comienza
+    a vivir otra experiencia
+    de Internet fibra óptica!
+                   </h2>
+                   <p class="tac baj">Déjanos tus datos y contácta
+                    con nuestos asesores de venta</p>
+                    <div class="imgcntc">
+                    <img src="./img/contacto.png" alt="">
+                    <div class="mgcd1"></div>
+                    <div class="mgcd2"></div>
+                  </div>
+                       </div>
+                <div class="rgt-a sombra pd-20 blnc pddn3 fblanco h400">
+    
+        <div class="container">
+            <form autocomplete="off" method="post" name="google-sheet" id="google-sheet">
+                <h3>Contáctanos</h3>
+    
+                <div class="form-input">
+                <input id="name" type="text" placeholder="Nombre Completo" name="Nombre" required>
+                <p class="mensajeError"></p>
               </div>
-           
-              <div class="topic">
-                <div class="open">
-                <p class="question">¿Para que sirve un Repetidor Wifi?
-            </p><span class="faq-t"></span>
-                </div>
-                <p class="answer">Un Repetidor permite ampliar el alcance de la conexión a internet o wifi de manera inalámbrica.</p>
+    
+              <div class="form-input">
+                <input id="email" type="number" placeholder="Escribe tu DNI" name="Dni" required>
+                <p class="mensajeError"></p>
               </div>
-              <div class="topic">
-                <div class="open">
-                <p class="question">¿Realizan servicios para empresas?
-            </p><span class="faq-t"></span>
-                </div>
-                <p class="answer">Si realizamos tanto servicio para empresas y el hogar.Tenemos Tecnología HFC y Fibra Óptica </p>
+    
+              <div class="form-input">
+                <input id="mobile" type="number" maxlength="8" minlength="8" placeholder="Celular" name="Celular" required autocomplete="off" >
+                <p class="mensajeError"></p>
               </div>
-              <div class="topic">
-                <div class="open">
-                <p class="question">¿Existe algún requisito para solicitar el servicio?
-            </p><span class="faq-t"></span>
-                </div>
-                <p class="answer">El servicio es brindado previo acuerdo y a evaluación crediticia. </p>
+              <div class="form-input">
+                <select id="message" name="Plan" required="required">
+                    <option value="">Selecciona tu plan</option>
+                    <option value="Internet Fibra Óptica">Internet Fibra Óptica</option>
+                    <option value="2 Play | Internet + Cable Avanzado">2 Play | Internet + Cable Avanzado</option>
+                    <option value="2 Play | Internet + Cable Superior">2 Play | Internet + Cable Superior</option>
+                    <option value="Cable">Cable</option>
+                </select>
+                <p class="mensajeError"></p>
               </div>
-           
-          </div>
-          </div>
-  </section>
-   
+                <!-- DESHABILITADO
+                <textarea id="message" rows="4" placeholder="como podemos ayudarte" name="message"></textarea>
+                
+                <label>Genero</label>
+                Hombre<input type="radio" name="gender"  value="male">
+                Mujer<input type="radio" name="gender" value="female">
+    -->
+    <div class="form-termsAndConditions termsAndConditions">
+        <input type="checkbox" id="termsAndConditions" >
+        <label for="termsAndConditions">He leído y estoy de acuerdo con los </label>
+        Términos y Condiciones
+        <p class="mensajeError"></p>
+      </div>
+    
+                <input type="submit" id="btn" value="Enviar" name="submit" class="button" >
+              <!--  <button type="reset" class="reset">Reset</button>-->
+            </form>
+        </div>
+    
+    
+                </div>
+        </div>
+    </section>
    
 
       <!-- ubicacion -->
@@ -1272,7 +1304,9 @@
       <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
       <script src="./js/swiper.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-       <!-- Scripts tabbar --> 
+     
+
+      <!-- Scripts tabbar --> 
        <script>
         window.onscroll = function() {myFunction()};
         
@@ -1298,9 +1332,23 @@
       });
     });
       </script>
+
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
        <!-- Scripts tabbar --> 
+<script src="./js/input-habilitar.js"></script>
+<script src="./js/form.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbymybtR0avStjmo4otleY5lxm6Y5se5CIvD-tF_WhBCOJDoLkM6_l8enA5-3hHGyGxdhA/exec'
+  const form = document.forms['google-sheet']
 
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Gracias por Registrar tu Solicitud.."))
+          .catch(error => console.error('Error!', error.message))
+           form.reset();
+      })
+    </script>
       <script src="./js/test.js"></script>
        <!-- Scripts Javascript --> 
        <script>
@@ -1326,83 +1374,8 @@
     }
     });
        </script>
+       <script src="./js/scrolll.js"></script>
        <!-- script menu-->
-       <script>
-        /**
- * Responsive nav bar written with CSS Grid
- * Kudos: https://www.youtube.com/watch?v=zFpReiq-wuI&feature=youtu.be
- *
- * Danos on YouTube did a marvelous tutorial but failed to leave
- * a link to the source code. I took the liberty of following
- * the video and detailing the code here WITH improvements.
- *
- * His later Github link leads to 404
- *
- * CLICK the FORK button above
- *
- * courtesy of https://github.com/thomascayne
- */
-
-var dropdown = document.querySelector(".nav .dropdown");
-var button = document.querySelector(".nav .menu");
-
-/**
- *Is needed to close the dropdown when user clicks outside
- */
-var nav = document.querySelector(".nav");
-
-/**
- * Alternative 1: works with: 
- * <i class="material-icons menu" onclick="menu()">menu</i>
- */
-function menu() {
-  if (dropdown.style.display === "grid") {
-    dropdown.style.display = "none";
-    button.innerHTML = "menu";
-  } else {
-    dropdown.style.display = "grid";
-    button.innerHTML = "cerrar";
-  }
-}
-
-/**
- * Alternative 2: works with: 
- * <i class="material-icons menu">menu</i>
-button.addEventListener('click', function() {
-    if (dropdown.style.display === "grid") {
-    dropdown.style.display = "none";
-    button.innerHTML = "menu";
-  } else {
-    dropdown.style.display = "grid";
-    button.innerHTML = "close";
-  }
-});
- */
-
-/**
- * Close the dropdown (if opened) on window resize
- */
-window.addEventListener("resize", function() {
-  if (window.innerWidth > 768) {
-    dropdown.style.display = "none";
-    button.innerHTML = "menu";
-  }
-});
-
-/**
- * If the dropdown is open and a click outside is detected,
- * the dropdown will be closed
- */
-document.addEventListener("click", function(event) {
-  var isClickInside = nav.contains(event.target);
-  if (!isClickInside) {
-    if (dropdown.style.display === "grid") {
-      dropdown.style.display = "none";
-      button.innerHTML = "menu";
-    }
-  }
-});
-
-       </script>
+       <script src="./js/menu.js"></script>
 </body>
 </html>

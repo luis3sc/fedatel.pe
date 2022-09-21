@@ -4,6 +4,9 @@
     box-sizing: border-box;
     width: 100%;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
     font-family: roboto, arial, sans-serif;
 }
@@ -30,10 +33,15 @@ h1{
 }
 h2{
   color: var(--terciario);
-  font-size: 2em;
+  font-size: 2.5em;
 }
 h3{
   width: auto;
+  font-size: 1.4em;
+}
+.baj{
+  font-size: 1.3em;
+  padding: 0 2em;
 }
 /** Pefil **/
 .perfil, .portada, .promocion, .catalogo    {
@@ -124,6 +132,7 @@ border-radius: 50%;
 .flex-c{
   flex-direction: column;
 }
+
 .flex-r{
   flex-direction: row;
 }
@@ -343,6 +352,17 @@ background: linear-gradient(180deg, rgba(250,114,24,1) 0%, rgb(250 142 24) 100%)
     .perfil-logo img, .perfil-logo{
       width: 200px;
   }
+  .info-sp{
+    font-size: 1.3em;
+  }
+   .m350{
+    font-size: 1.5em !important;
+  }
+  }
+  @media only screen and (max-width: 720px)  {
+    .espe{
+      flex-direction: column;
+    }
   }
 
 
@@ -709,7 +729,16 @@ background-color: rgb(255, 255, 255);
 }
 .fondo-n{
   background-color: var(--nar);
+  position: relative;
 background: linear-gradient(-270deg, rgba(250,172,24,1) 0%, rgba(250,114,24,1) 100%);
+}
+.fondo-b{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-image: url(../img/bg.jpg);
+  opacity: 0.1;
 }
 .tarj-b{
   padding: 2em 10px;
@@ -749,21 +778,44 @@ background: linear-gradient(-270deg, rgba(250,172,24,1) 0%, rgba(250,114,24,1) 1
 
 }
 .flexn{
-  max-width: 350px;
+  max-width: 450px;
+  width: 100%;
     margin: auto;
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
+    padding: 1em 0em;
+}
+.cel{
+  width: 100%;
+  border-radius: 20px;
+  padding: 1em 0em;
+  margin: 1em 0em;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.sptimg{
+  width: 40%;
+  max-width: 130px;
+  position: absolute;
+  left: 0px;
+  top: -15px;
 }
 .celu{
   background: #ff4100;
+  /* width: 50px; */
   border: 5px solid #ff4100;
+  /* height: 50px; */
+}
+.icoesp{
+  position: absolute;
+  left: -35px;
 }
 .wsp{
   background: #008516;
   border: 5px solid #008516;
 }
 .m500{
-  max-width: 380px;
   text-align: center;
 }
 .h400{
@@ -802,6 +854,7 @@ background: linear-gradient(-270deg, rgba(250,172,24,1) 0%, rgba(250,114,24,1) 1
     max-width: 250px;
     margin: 0 auto;
     color: var(--nar);
+    font-size: 2em;
     height: 50px;
     display: flex;
     align-items: center;
@@ -910,4 +963,101 @@ input[type="submit"]:disabled
   border: 1px solid #000;
   position: absolute;
   left: -18px;
+}
+.a70{
+  width: 70%;
+}
+.a30{
+  max-width: 340px;
+  position: relative;
+  width: 100%;
+}
+.a30 img{
+  width: 80%;
+  border-radius: 20px;
+  display: block;
+  z-index: 1;
+  margin: 1.4em 0px;
+}
+.cuadro{
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  bottom: 0;
+  background-color: var(--cuatro);
+  width: 120px;
+  border-radius: 20px;
+  height: 120px;
+}
+.cuadro2{
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 2px solid var(--cuatro);
+  width: 120px;
+  border-radius: 20px;
+  height: 120px;
+}
+.info-sp{
+  height: 95px;
+  border: 2px solid var(--cuatro);
+  width: 60%;
+  margin-right: 15px;
+  border-radius: 20px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--cuatro);
+}
+.imgcntc{
+  width: 70%;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+}
+.imgcntc img{
+  border-radius: 20px;
+  background-color: #FAAC18;
+  position: inherit;
+  z-index: 1;
+}
+.mgcd1{
+  height: 150px;
+  width: 220px;
+  left: 0px;
+  top: 0;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 0;
+  border: 2px solid var(--cuatro);
+}
+.mgcd2{
+  height: 150px;
+  width: 220px;
+  right: 0px;
+  bottom: 0;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 0;
+  border: 2px solid var(--cuatro);
+}
+.int{
+  position: inherit;
+  z-index: 1;
+}
+button, .button {
+  outline: none;
+  background: #ff0000;
+  color: #fff;
+  border: 0px;
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  z-index: 2;
+/*    pointer-events: none; */
 }
