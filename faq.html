@@ -7,35 +7,52 @@
     <title>Fedatel</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/perfil.css">
-    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/menu2.css">
     <link rel="stylesheet" href="./css/slider-swip.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-    
-      <div class="content">
-        <img class="brand log-dis" src="./img/logofedatel.svg" class="logo-header" alt="">
-        <div class="links nav-items">
-          <a href="index.html">Inicio</a>
-          <a href="catalogo.html">Catálogo</a>
-          <a href="nosotros.html">Nosotros</a>
-          <a href="faq.html">Preguntas Frecuentes</a>
-          
+  <section class="navigation">
+    <div class="nav-container">
+        <div class="brand flex-centro">
+            <a href="index.html"> <img src="https://luis3sc.github.io/fedatel.pe/img/logofedatel.svg" alt=""></a>
         </div>
-        <i class="material-icons menu" onclick="menu()">menu</i>
-      </div>
-      <div class="dropdown" id="dropdown">
-       <a href="index.html">Inicio</a>  
-       <a href="catalogo.html">Catálogo</a>
-       <a href="nosotros.html">Nosotros</a>
-       <a href="faq.html">Preguntas Frecuentes</a>
-      </div>
-    
-  </nav>
-</header>
+        <nav>
+            <div class="nav-mobile">
+                <a id="nav-toggle" href="#!">Menu
+                </a>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+              
+                <li>
+                    <a href="#!">Catálogo</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="catalogo.html">Internet</a>
+                        </li>
+                        <li>
+                            <a href="catalogo.html">Internet + Cable TVHD</a>
+                        </li>
+                        <li>
+                            <a href="catalogo.html">Cable TVHD</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+               
+                <li>
+                    <a href="faq.html" class="current">Preguntas Frecuentes</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
     
   
      <!-- Catalogo -->
@@ -122,9 +139,25 @@
      </div>
   </div>
 </section>
-
+<footer class="footer flex-centro m-wd tac pd-h" style="margin:auto;">
+  <a href="trabaja.html" class="">Trabaja con nosotros </a> 
+</footer>
+<div class="bloqueFlotante"> 
+  <div id="wsp" class="d-none position-relative"> 
+    <a href="https://api.whatsapp.com/send/?phone=51951337791&amp;text=Hola%20Necesito%20Ayuda" target="_blank"> 
+      <img loading="lazy" class="lazyload" src="https://static.claro.com.pe/img/whatssapp.svg" /> 
+      <span class="tagNuevo">SOPORTE</span>
+    </a>
+  </div> 
+  <div id="wsp" class="d-none position-relative" style="
+  margin-top: 15px;"> 
+    <a href="https://api.whatsapp.com/send/?phone=51920519662&amp;text=Hola%20Fedatel,%20quiero%20un%20plan" target="_blank"> 
+      <img loading="lazy" class="lazyload"  src="https://static.claro.com.pe/img/whatssapp.svg" /> 
+      <span class="tagNuevo">VENTAS</span>
+      </a>
+  </div> 
+ </div> 
     <!-- Scripts Javascript --> 
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
        <script>
         $(".open").click( function () {
     var container = $(this).parents(".topic");
@@ -148,72 +181,7 @@
     }
     });
        </script>
-
-       <script>
-        /**
- 
- */
-
-var dropdown = document.querySelector(".nav .dropdown");
-var button = document.querySelector(".nav .menu");
-
-/**
- *Is needed to close the dropdown when user clicks outside
- */
-var nav = document.querySelector(".nav");
-
-/**
- * Alternative 1: works with: 
- * <i class="material-icons menu" onclick="menu()">menu</i>
- */
-function menu() {
-  if (dropdown.style.display === "grid") {
-    dropdown.style.display = "none";
-    button.innerHTML = "menu";
-  } else {
-    dropdown.style.display = "grid";
-    button.innerHTML = "cerrar";
-  }
-}
-
-/**
- * Alternative 2: works with: 
- * <i class="material-icons menu">menu</i>
-button.addEventListener('click', function() {
-    if (dropdown.style.display === "grid") {
-    dropdown.style.display = "none";
-    button.innerHTML = "menu";
-  } else {
-    dropdown.style.display = "grid";
-    button.innerHTML = "close";
-  }
-});
- */
-
-/**
- * Close the dropdown (if opened) on window resize
- */
-window.addEventListener("resize", function() {
-  if (window.innerWidth > 768) {
-    dropdown.style.display = "none";
-    button.innerHTML = "menu";
-  }
-});
-
-/**
- * If the dropdown is open and a click outside is detected,
- * the dropdown will be closed
- */
-document.addEventListener("click", function(event) {
-  var isClickInside = nav.contains(event.target);
-  if (!isClickInside) {
-    if (dropdown.style.display === "grid") {
-      dropdown.style.display = "none";
-      button.innerHTML = "menu";
-    }
-  }
-});
-
-       </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="./js/menut2.js"></script>
 </body>
 </html>
