@@ -53,8 +53,10 @@
         </nav>
     </div>
 </section>
-    
+    <!--FAQ-->
   
+   
+    
      <!-- Catalogo -->
      <section class="fondo-n pddnt3">
         <div class="mgn-a m-760 pd-20 grid gap1">
@@ -157,31 +159,33 @@
       </a>
   </div> 
  </div> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+ <script src="./js/test.js"></script>
     <!-- Scripts Javascript --> 
-       <script>
-        $(".open").click( function () {
-    var container = $(this).parents(".topic");
-    var answer = container.find(".answer");
-    var trigger = container.find(".faq-t");
-    
-    answer.slideToggle(200);
-    
-    if (trigger.hasClass("faq-o")) {
-    trigger.removeClass("faq-o");
-    }
-    else {
-    trigger.addClass("faq-o");
-    }
-    
-    if (container.hasClass("expanded")) {
-    container.removeClass("expanded");
-    }
-    else {
-    container.addClass("expanded");
-    }
-    });
-       </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+      $(".open").click( function () {
+  var container = $(this).parents(".topic");
+  var answer = container.find(".answer");
+  var trigger = container.find(".faq-t");
+  
+  answer.slideToggle(200);
+  
+  if (trigger.hasClass("faq-o")) {
+  trigger.removeClass("faq-o");
+  }
+  else {
+  trigger.addClass("faq-o");
+  }
+  
+  if (container.hasClass("expanded")) {
+  container.removeClass("expanded");
+  }
+  else {
+  container.addClass("expanded");
+  }
+  });
+     </script>
+ 
   <script src="./js/menut2.js"></script>
 </body>
 </html>
